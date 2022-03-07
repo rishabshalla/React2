@@ -10,15 +10,15 @@ export class Form extends Component {
     show: false,
   };
 
-  handleChange = (event) => {
-    console.log(event.target);
+  handleChange = (e) => {
+    console.log(e.target);
     this.setState({
-      [event.target.name]: event.target.value,
+      [e.target.name]: e.target.value,
     });
   };
 
-  OnSubmit(event) {
-    event.preventDefault();
+  OnSubmit(e) {
+    e.preventDefault();
     const Obj = {
       name: this.state.name,
       department: this.state.department,
@@ -83,7 +83,7 @@ export class Form extends Component {
                 return (
                   <div className="data">
                     <h1>
-                      {event.name} || {event.department} || {event.rating}
+                      {event.name} | {event.department} | {event.rating}
                     </h1>
                   </div>
                 );
