@@ -11,7 +11,7 @@ export class Form extends Component {
   };
 
   handleChange = (e) => {
-    console.log(e.target);
+    // console.log(e.target);
     this.setState({
       [e.target.name]: e.target.value,
     });
@@ -79,11 +79,11 @@ export class Form extends Component {
         {this.state.show && (
           <div className="EmploData">
             {this.state.employees.length > 0 &&
-              this.state.employees.map((event) => {
+              this.state.employees.map((e) => {
                 return (
                   <div className="data">
                     <h1>
-                      {event.name} | {event.department} | {event.rating}
+                      {e.name} | {e.department} | {e.rating}
                     </h1>
                   </div>
                 );
